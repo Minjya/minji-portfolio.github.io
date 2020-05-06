@@ -8,10 +8,306 @@
     <title>Kim Min Ji - Portfolio</title>
 </head>
 
-<link rel="stylesheet" type="text/css" href="css/main.css">
-
 <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-<script src="js/jquery.simple-full-background.js"></script>
+<script src="jquery.simple-full-background.js"></script>
+    
+<style>
+        body {
+        overflow: hidden;
+    }
+
+    .noise {
+        z-index: 999;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        opacity: .032;
+    }
+
+    /* 기본 배경 */
+    .b002 {
+        -webkit-animation-name: b002over;
+        /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: 4s;
+        /* Safari 4.0 - 8.0 */
+        animation-name: b002over;
+        animation-duration: 4s;
+        animation-timing-function: ease;
+        z-index: 1;
+    }
+
+    @keyframes b002over {
+        0% {
+            opacity: 0;
+        }
+
+        40% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @-webkit-keyframes b002over
+
+    /* Safari 4.0 - 8.0 */
+        {
+        0% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .b003 {
+        -webkit-animation-name: b003over;
+        /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: 4.2s;
+        /* Safari 4.0 - 8.0 */
+        -webkit-animation-delay: 0s;
+        /* Safari 4.0 - 8.0 */
+        animation-name: b003over;
+        animation-delay: 0s;
+        animation-duration: 4.2s;
+        animation-timing-function: ease;
+        z-index: 2;
+    }
+
+    @keyframes b003over {
+        0% {
+            opacity: 0;
+        }
+
+        90% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @-webkit-keyframes b003over
+
+    /* Safari 4.0 - 8.0 */
+        {
+        0% {
+            opacity: 0;
+        }
+
+        90% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    /* 팝업 배경 */
+    .b004 {
+        -webkit-animation-name: b004over;
+        /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: 4.3s;
+        /* Safari 4.0 - 8.0 */
+        -webkit-animation-delay: 0s;
+        /* Safari 4.0 - 8.0 */
+        animation-name: b004over;
+        animation-delay: 0s;
+        animation-duration: 4.3s;
+        animation-timing-function: ease;
+        z-index: 3;
+        animation-iteration-count: 1;
+    }
+
+    @keyframes b004over {
+        0% {
+            opacity: 0;
+        }
+
+        90% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @-webkit-keyframes b004over
+
+    /* Safari 4.0 - 8.0 */
+        {
+        0% {
+            opacity: 0;
+        }
+
+        90% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    /* 닫기 버튼 */
+    .close {
+        -webkit-animation-name: close;
+        /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: 4.3s;
+        /* Safari 4.0 - 8.0 */
+        -webkit-animation-delay: 0s;
+        /* Safari 4.0 - 8.0 */
+        animation-name: close;
+        animation-delay: 0s;
+        animation-duration: 4.3s;
+        animation-timing-function: ease;
+        animation-iteration-count: 1;
+        position: absolute;
+        right: 2%;
+        top: 3%;
+        z-index: 4;
+    }
+
+    @keyframes close {
+        0% {
+            opacity: 0;
+        }
+
+        90% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @-webkit-keyframes close
+
+    /* Safari 4.0 - 8.0 */
+        {
+        0% {
+            opacity: 0;
+        }
+
+        90% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @import url('https://fonts.googleapis.com/css?family=Krona+One');
+
+    /* 다운로드 버튼 */
+    .mouse-cursor-gradient-tracking {
+        position: relative;
+        background: #222222;
+        opacity: 0.7;
+        font-size: 0.6rem;
+        border: none;
+        color: #FFFAF5;
+        cursor: pointer;
+        outline: none;
+        overflow: hidden;
+        width: 160px;
+        height: 40px;
+        border-radius: 4px;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+        font-family: 'Krona One', sans-serif;
+        z-index: 4;
+        -webkit-animation-name: downloadbut;
+        /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: 4.3s;
+        /* Safari 4.0 - 8.0 */
+        -webkit-animation-delay: 0s;
+        /* Safari 4.0 - 8.0 */
+        animation-name: downloadbut;
+        animation-delay: 0s;
+        animation-duration: 4.3s;
+        animation-timing-function: ease;
+        animation-iteration-count: 1;
+    }
+
+    @keyframes downloadbut {
+        0% {
+            opacity: 0;
+        }
+
+        80% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @-webkit-keyframes downloadbut
+
+    /* Safari 4.0 - 8.0 */
+        {
+        0% {
+            opacity: 0;
+        }
+
+        80% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    /* 다운로드 텍스트 */
+    .mouse-cursor-gradient-tracking span {
+        position: relative;
+        top: -1px;
+    }
+
+    /* 그라디언트*/
+    .mouse-cursor-gradient-tracking::before {
+        --size: 0;
+        content: '';
+        position: absolute;
+        left: var(--x);
+        top: var(--y);
+        width: var(--size);
+        height: var(--size);
+        background: radial-gradient(circle closest-side, #ffc211, transparent);
+        transform: translate(-50%, -50%);
+        transition: width .2s ease, height .2s ease;
+    }
+
+    /* 마우스오버 그라디언트 사이즈 */
+    .mouse-cursor-gradient-tracking:hover::before {
+        --size: 200px;
+    }
+
+    /*
+    .popup {
+        position: absolute;
+        left: 45%;
+        top: 37.5%;
+    }
+    */
+    </style>
 
 
 
